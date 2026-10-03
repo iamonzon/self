@@ -1,0 +1,12 @@
+---
+title: Home
+---
+<h1>Ivan adventures</h1>
+
+
+<h3>More posts</h3>
+<ul class="posts">
+$for(posts)$
+  <li class="reveal"><a href="$url$">$title$</a> <span class="meta">$date$</span></li>
+$endfor$
+</ul>

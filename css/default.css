@@ -1,0 +1,22 @@
+:root { --fg: #4c4f69; --bg: #eff1f5; --muted: #6c6f85; --accent: #8839ef; --code: #e6e9ef; } /* catppuccin latte */
+:root[data-theme="dark"] { --fg: #cdd6f4; --bg: #1e1e2e; --muted: #a6adc8; --accent: #cba6f7; --code: #181825; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --fg: #cdd6f4; --bg: #1e1e2e; --muted: #a6adc8; --accent: #cba6f7; --code: #181825; } }
+body { max-width: 42rem; margin: 2rem auto; padding: 0 1rem; font: 18px/1.6 Georgia, serif; color: var(--fg); background: var(--bg); }
+header { display: flex; justify-content: space-between; margin-bottom: 3rem; }
+a { color: var(--accent); }
+nav { display: flex; gap: 1rem; align-items: center; }
+#theme { background: none; border: 0; cursor: pointer; font-size: 1.2em; color: inherit; }
+.moon, :root[data-theme="dark"] .sun { display: none; }
+:root[data-theme="dark"] .moon { display: inline; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .sun { display: none; }
+  :root:not([data-theme="light"]) .moon { display: inline; }
+}
+.meta { color: var(--muted); font-size: .85em; }
+.posts { list-style: none; padding: 0; }
+pre { overflow-x: auto; padding: 1rem; background: var(--code); }
+
+/* scroll-reveal: js/main.js adds .in when the element scrolls into view */
+.reveal { opacity: 0; transform: translateY(8px); transition: opacity .5s, transform .5s; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }

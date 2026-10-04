@@ -3,5 +3,5 @@
   "name": "self",
   "compatibility_date": "2026-10-03",
   "assets": { "directory": "./result" },
-  "routes": [{ "pattern": "iamonzon.dev", "custom_domain": true }]
+  "routes": [{ "pattern": "iamonzon.com", "custom_domain": true }]
 }
